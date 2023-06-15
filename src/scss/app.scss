@@ -1,0 +1,122 @@
+/*
+Template Name: Admin Template
+Author: Niravjoshi / Wrappixel
+File: scss
+*/
+
+//(Required file)
+@import "variable";
+
+// Import Bootstrap source files (Required file)
+@import "bootstrap/bootstrap";
+
+//This is for the components (Required file)
+@import "components";
+
+//This is for the widgets (Required file)
+@import "widgets/widgets";
+
+//This is for the responsive (Required file)
+// @import "responsive";
+
+//In This scss you can write your scss
+@import "custom";
+
+//This is for the icons (Required file)
+@import "/src/scss/material-design-iconic-font/css/materialdesignicons.min.css";
+
+@import "landingpage";
+
+//logos duetone
+@import "/src/assets/joomla/joomla-fonts.css";
+
+@import "/node_modules/boxicons/css/boxicons.min.css";
+
+// @import "./custom.css";
+
+.bg-keyrus{
+    background-color: #c1ddf8 !important;
+    border-color: #c1ddf8 !important;
+}
+
+.bg-keyrus-body{
+    background-color: #ffffff !important;
+    border-color: #c1ddf8 !important;
+}
+
+.bg-keyrus-dark{
+    background-color: #CFD8DC !important;
+    border-color: #CFD8DC !important;
+}
+
+html {
+    font-size: 13px;
+}
+
+.keyrus-scroll
+{
+    height: 500px;
+    position: relative; //realite
+    padding-top: 10px;
+    padding-bottom: 60px;
+    overflow-y: hidden;
+    overflow-x: hidden; 
+    transition: $tran-03;
+}
+
+.keyrus-scroll:hover{
+    overflow-y: scroll;
+    transition: $tran-03;
+  }
+
+
+.grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.grabbable:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.kdropdown:focus + .kdropdown-content{
+    visibility: visible;
+    transition: $tran-04;
+    
+    animation: flipInY; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; 
+}
+
+.kdropdown-content{
+    display: block;
+    visibility: hidden;
+    padding: 2;
+    position: absolute;
+    background: white;
+    min-width: 160px;
+    box-shadow: 0 0.125em 0.25em rgba(0,0,0,0.2);
+    // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: $tran-04;
+   
+    z-index: 1;
+}
+.kdropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.kdropdown-content a:hover {
+    background: #ecf4fd;
+}
+
+  
+
