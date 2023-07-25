@@ -1,42 +1,33 @@
-<p-card header="Realizar Solicitud">
-    <div class="formgroup-inline">
-        <div class="field">
-            <label for="">Nro Sol</label>
-            <input type="text" pInputText  />
+<p-card header="Realizar Solicitud" >
+    <p-toast></p-toast>
+    <div class="formgrid grid">
+        <div class="field col-4">
+            <label for="firstname2">Nro Sol</label>
+            <input type="text" pInputText class="w-full"  />
         </div>
-        <div class="field">
-            <label for=""> Solicitante:</label>
-            <p-dropdown  formControlName="user"  [options]="usuarios"  optionLabel="name"></p-dropdown>
+        <div class="field col-4">
+            <label for="lastname2">Solicitante:</label><br>
+            <p-dropdown  formControlName="Solicitante"  [options]="usuarios"  optionLabel="name" styleClass="w-full"></p-dropdown>
         </div>
-        <div class="field">
-            <label for=""> Unidad:</label>
-            <p-dropdown  formControlName="city"  [options]="usuarios"  optionLabel="name"></p-dropdown>
+        <div class="field col-4">
+            <label for="lastname2">Unidad:</label><br>
+            <p-dropdown  formControlName="unidades"  [options]="unidades"  optionLabel="name" styleClass="w-full"></p-dropdown>
         </div>
-    </div>
-    <div class="formgroup-inline">
-        <div class="field">
-            <label for=""> Tipo de Servicio:</label>
-            <p-dropdown  formControlName="city"  [options]="usuarios"  optionLabel="name"></p-dropdown>
+        <div class="field col-4">
+            <label for="lastname2">Tipo de Servicio:</label><br>
+            <p-dropdown  formControlName="servicios"  [options]="servicios"  optionLabel="name" styleClass="w-full"></p-dropdown>
         </div>
-        <div class="field">
-            <label for="">HR:</label>
-            <input type="text" pInputText  />
-        </div>
-        
-        <div class="field">
-            <label for="">Orden de Compra:</label>
-            <input type="text" pInputText  />
+        <div class="field col-2">
+            <label for="firstname2">Hoja de Ruta</label>
+            <input type="text" pInputText class="w-full"  />
         </div>
 
-    </div>
-    <div class="formgroup-inline">
-        <div class="field">
-            <label for=""> Informe de pago</label>
-            <input type="text" pInputText  />  <p-button class="pl-2" label="Subir Archivo"> </p-button>
-            
-        </div>
-        <div class="field">
-            Documentos Legales:  
+        <div class="field col-6">
+            <label for="firstname2">Orden de Compra</label>
+            <input type="text" pInputText class="w-full"  />
         </div>
     </div>
+    <p-button class="pl-2" label="Cancelar" styleClass="p-button-secondary"> </p-button>
+    <p-button class="pl-2" label="Registrar Solicitud" (click)="registrar()" > </p-button>
+        
 </p-card>
