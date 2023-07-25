@@ -14,6 +14,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { FileUploadModule } from 'primeng/fileupload';
 import { ToastModule } from 'primeng/toast';
+import { DialogModule } from 'primeng/dialog';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ToastModule } from 'primeng/toast';
     InputTextModule,
     BrowserAnimationsModule,
     FileUploadModule,
-    ToastModule
+    ToastModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
